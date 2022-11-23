@@ -7,46 +7,46 @@ import lxml
 
 def cleaner(match):
     def cleaner(match):
-    match['team']= match['Unnamed: 0'].str.split(' ').str[1]
-    match['name']= match['Unnamed: 0'].str.split(' ').str[0]
-    
-    match['atk ACS']= match['ACS'].str.split(' ').str[2].astype(int)
-    match['def ACS']= match['ACS'].str.split(' ').str[4].astype(int)
-    match['ACS']= match['ACS'].str.split(' ').str[0].astype(int)
-    
-    match['atk K']= match['K'].str.split(' ').str[2].astype(int)
-    match['def K']= match['K'].str.split(' ').str[4].astype(int)
-    match['K']= match['K'].str.split(' ').str[0].astype(int)
-    
-    match['atk D']= match['D'].str.split(' ').str[4].astype(int)
-    match['def D']= match['D'].str.split(' ').str[6].astype(int)
-    match['D']= match['D'].str.split(' ').str[2].astype(int)
-   
-    match['atk A']= match['A'].str.split(' ').str[2].astype(int)
-    match['def A']= match['A'].str.split(' ').str[4].astype(int)
-    match['A']= match['A'].str.split(' ').str[0].astype(int)
-   
-    match['atk KAST']= match['KAST'].str.split('%').str[1].astype(int)
-    match['def KAST']= match['KAST'].str.split('%').str[2].astype(int)
-    match['KAST']= match['KAST'].str.split('%').str[0].astype(int)
-    
-    match['atk ADR']= match['ADR'].str.split(' ').str[2].astype(int)
-    match['def ADR']= match['ADR'].str.split(' ').str[4].astype(int)
-    match['ADR']= match['ADR'].str.split(' ').str[0].astype(int)
-    
-    match['atk HS%']= match['HS%'].str.split('%').str[1].astype(int)
-    match['def HS%']= match['HS%'].str.split('%').str[2].astype(int)
-    match['HS%']= match['HS%'].str.split('%').str[0].astype(int)
-    
-    match['atk FK']= match['FK'].str.split(' ').str[2].astype(int)
-    match['def FK']= match['FK'].str.split(' ').str[4].astype(int)
-    match['FK']= match['FK'].str.split(' ').str[0].astype(int)
-    
-    match['atk FD']=match['FD'].str.split(' ').str[2].astype(int)
-    match['def FD']=match['FD'].str.split(' ').str[4].astype(int)
-    match['FD']=match['FD'].str.split(' ').str[0].astype(int)
-    
-    match.drop(['Unnamed: 0','Unnamed: 1','+/–','+/–.1'],axis=1,inplace=True)
+        match['team']= match['Unnamed: 0'].str.split(' ').str[1]
+        match['name']= match['Unnamed: 0'].str.split(' ').str[0]
+
+        match['atk ACS']= match['ACS'].str.split(' ').str[2].astype(int)
+        match['def ACS']= match['ACS'].str.split(' ').str[4].astype(int)
+        match['ACS']= match['ACS'].str.split(' ').str[0].astype(int)
+
+        match['atk K']= match['K'].str.split(' ').str[2].astype(int)
+        match['def K']= match['K'].str.split(' ').str[4].astype(int)
+        match['K']= match['K'].str.split(' ').str[0].astype(int)
+
+        match['atk D']= match['D'].str.split(' ').str[4].astype(int)
+        match['def D']= match['D'].str.split(' ').str[6].astype(int)
+        match['D']= match['D'].str.split(' ').str[2].astype(int)
+
+        match['atk A']= match['A'].str.split(' ').str[2].astype(int)
+        match['def A']= match['A'].str.split(' ').str[4].astype(int)
+        match['A']= match['A'].str.split(' ').str[0].astype(int)
+
+        match['atk KAST']= match['KAST'].str.split('%').str[1].astype(int)
+        match['def KAST']= match['KAST'].str.split('%').str[2].astype(int)
+        match['KAST']= match['KAST'].str.split('%').str[0].astype(int)
+
+        match['atk ADR']= match['ADR'].str.split(' ').str[2].astype(int)
+        match['def ADR']= match['ADR'].str.split(' ').str[4].astype(int)
+        match['ADR']= match['ADR'].str.split(' ').str[0].astype(int)
+
+        match['atk HS%']= match['HS%'].str.split('%').str[1].astype(int)
+        match['def HS%']= match['HS%'].str.split('%').str[2].astype(int)
+        match['HS%']= match['HS%'].str.split('%').str[0].astype(int)
+
+        match['atk FK']= match['FK'].str.split(' ').str[2].astype(int)
+        match['def FK']= match['FK'].str.split(' ').str[4].astype(int)
+        match['FK']= match['FK'].str.split(' ').str[0].astype(int)
+
+        match['atk FD']=match['FD'].str.split(' ').str[2].astype(int)
+        match['def FD']=match['FD'].str.split(' ').str[4].astype(int)
+        match['FD']=match['FD'].str.split(' ').str[0].astype(int)
+
+        match.drop(['Unnamed: 0','Unnamed: 1','+/–','+/–.1'],axis=1,inplace=True)
 
 # main function
 matchlink = str(input())
