@@ -49,6 +49,7 @@ def cleaner(match):
         match.drop(['Unnamed: 0','Unnamed: 1','+/–','+/–.1'],axis=1,inplace=True)
 
 # main function
+print('please enter link')
 matchlink = str(input())
 try:
     matches = pd.read_html(matchlink)
